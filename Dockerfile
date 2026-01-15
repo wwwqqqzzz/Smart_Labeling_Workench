@@ -33,5 +33,5 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
 # 设置工作目录
 WORKDIR /app/backend
 
-# 启动命令
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "$PORT", "--workers", "1"]
+# 启动命令（使用 shell 形式以展开环境变量）
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT} --workers 1
