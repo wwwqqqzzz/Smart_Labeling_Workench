@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
-from app.api.v1 import conversations, tags, export, recommendations, batches
+from app.api.v1 import conversations, tags, export, recommendations, batches, admin
 import importlib
 
 # 导入import模块（import是Python关键字，需要使用importlib）
@@ -32,6 +32,7 @@ app.include_router(import_api.router, prefix="/api/v1/import", tags=["import"])
 app.include_router(export.router, prefix="/api/v1/export", tags=["export"])
 app.include_router(recommendations.router, prefix="/api/v1/recommendations", tags=["recommendations"])
 app.include_router(batches.router, prefix="/api/v1", tags=["batches"])
+app.include_router(admin.router, prefix="/api/v1/admin", tags=["admin"])
 
 
 @app.get("/")
