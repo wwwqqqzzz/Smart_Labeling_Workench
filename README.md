@@ -185,6 +185,35 @@ chmod +x deploy.sh
 ./deploy.sh
 ```
 
+### 公网部署（亚洲节点，免费）
+
+如果你要快速部署到公网（亚洲节点）：
+
+1. **[RAILWAY_DEPLOYMENT.md](RAILWAY_DEPLOYMENT.md)** - Railway.app 5分钟公网部署指南（推荐）
+2. **[railway.json](railway.json)** - Railway 配置文件
+3. **[nixpacks.toml](nixpacks.toml)** - Nixpacks 构建配置
+
+**Railway 部署优势**：
+- ✅ 免费额度 $5/月
+- ✅ 自动 HTTPS 证书
+- ✅ 新加坡/日本节点
+- ✅ GitHub 自动部署
+- ✅ 无需服务器运维
+
+**快速开始**：
+```bash
+# 1. 推送代码到 GitHub
+git init
+git add .
+git commit -m "Ready for Railway"
+git remote add origin https://github.com/你的用户名/smart-labeling-workbench.git
+git push -u origin main
+
+# 2. 在 railway.app 从 GitHub 部署（5分钟完成）
+# 访问 https://railway.app/ → New Project → 选择你的仓库
+```
+
+详细步骤见：[Railway 部署指南](RAILWAY_DEPLOYMENT.md)
 
 ### 运维部署
 

@@ -1,12 +1,28 @@
-# 环境变量
+# 环境变量（绝对不能提交！）
 .env
 .env.local
+.env.production
 .env.*.local
+.env.production.backup
+
+# 示例文件可以提交（不包含真实密钥）
+#.env.example
+#.env.production.example
 
 # 数据
 data/
 *.db
 *.db-journal
+
+# SSL 证书
+*.pem
+*.key
+*.crt
+ssl/
+
+# Railway 配置（可能包含敏感信息）
+railway.env
+.vercel/env.local
 
 # Python
 __pycache__/
