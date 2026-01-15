@@ -18,7 +18,13 @@ class Settings(BaseSettings):
     DEBUG: bool = True
 
     # CORS
-    BACKEND_CORS_ORIGINS: list[str] = ["http://localhost:3000", "http://localhost:3002", "http://localhost:3001"]
+    BACKEND_CORS_ORIGINS: list[str] = [
+        "http://localhost:3000",
+        "http://localhost:3001",
+        "http://localhost:3002",
+        "https://frontend-wqz.vercel.app",
+        "https://smart-labeling-workbench.vercel.app"
+    ]
 
     class Config:
         env_file = ".env"
